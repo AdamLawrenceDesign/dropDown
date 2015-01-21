@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />			<!-- Meta Data -->
+
+    <title>Gift Items</title>
+    
+    <link rel="shortcut icon" href="img/camera.png"> 								
+    <link rel="stylesheet" href="css/screen.css?v1.1" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,500italic|Open+Sans:400,300,700,600,300italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js?v1.1"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/dropDown.js"></script>
+
+	<style>
+    	
+		#giftLinks {
+			position:absolute;
+			top:100%;
+			left:0;
+			width:100%;
+			z-index:5;
+			display:none;
+			border-top:2px solid #ddd;
+		}
+		
+		#giftLinks ul {
+			margin-top:.5em;
+		}
+		
+		#giftLinks ul li a {
+			line-height:1;
+			border-bottom:0;
+			padding-top:0;
+			padding-bottom:0;
+			height:auto
+		}
+		
+		#giftLinks a:hover {
+			color:rgb(108, 173, 223);
+		}
+    
+    </style>
+
+</head>
+
+<body>
+        
+    <nav class="clearfix prm_lt relative">
+    
+        <section>
+        
+            <ul class="inline fl_lt desktop_view">
+                <li><a href="index.aspx" class="index taphover"><span>Home</span></a></li>
+                <li><a href="downloads.aspx" class="downloads taphover"><span>Portrait Photos</span></a></li>
+                <li><a href="group_img.aspx" class="group_img taphover"><span>Group Photos</span></a></li>
+                <li><a href="packages.aspx" class="packages taphover"><span>Photography Packages</span></a></li>
+                <li><a href="gift_items.aspx" class="gift_items nav_selected taphover" data-dropDown="giftLinks"><span>Gift Items</span></a></li>
+            </ul>
+            
+             <ul class="inline fl_rt">
+                <li>
+                	<a id="cart" class="cart" href="~/cart.aspx">
+                    <span class="icon icon-cart txt_md txt_ntl m_l_right"></span>0.00
+                    </a>
+                </li>
+            </ul>
+            
+        </section>
+        
+        <section>
+        
+            <div id="giftLinks" class="align_lt p_l bg_fff clearfix round_sd_bottom">
+           
+                <div class="_25_m p_l_right">
+                    <h3 class="txt_prm_m">Top Sellers</h3>
+                    <div class="underline_solid"></div>
+                    <ul class="links no_indent clearfix links_line_right border_box txt_sm">
+                        <li><a href="#">Mugs</a></li>
+                        <li><a href="#">Canvas Prints</a></li>
+                        <li><a href="#">Photo Blocks</a></li>
+                        <li><a href="#">Ceramic Tiles</a></li>
+                        <li><a href="#">Greeting Cards</a></li>
+                        <li><a href="#">Keyrings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="_25_m  p_l_right">
+                    <h3 class="txt_prm_m">Product Lines</h3>
+                    <div class="underline_solid"></div>
+                    <ul class="links no_indent clearfix links_line_right border_box txt_sm">
+                        <li><a href="#">Mugs</a></li>
+                        <li><a href="#">Canvas Prints</a></li>
+                        <li><a href="#">Photo Blocks</a></li>
+                        <li><a href="#">Ceramic Tiles</a></li>
+                        <li><a href="#">Glass Prints</a></li>
+                        <li><a href="#">Greeting Cards</a></li>
+                        <li><a href="#">Gift Items</a></li>
+                        <li><a href="#">Metal Prints</a></li>
+                    </ul>
+                </div>
+                
+                <div class="_25_m p_l_right align_ct">
+                    <img src="img/gifts/CANVAS_LONG_HERO.jpg" class="_90_s clearfix" />
+                    <img src="img/gifts/keyring.jpg" class="_90_s clearfix" />
+                </div>
+                
+                <div class="_25_m  p_l_right">
+                    <h3 class="txt_prm_m">Gift Items</h3>
+                    <div class="underline_solid"></div>
+                    <ul class="links no_indent clearfix links_line_right border_box txt_sm">
+                        <li><a href="#">Greeting Cards</a></li>
+                        <li><a href="#">Sports Drink Bottle</a></li>
+                        <li><a href="#">Metal Prints</a></li>
+                        <li><a href="#">Notepads - Notebooks</a></li>
+                        <li><a href="#">Framed Canvas in Shadow Box</a></li>
+                        <li><a href="#">Mouse Mats</a></li>
+                        <li><a href="#">Keyrings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="clearfix"></div>
+                
+            	<div class="bg_ntl_l p_l m_l_top">
+                	<a href="#" class="txt_xs "><span class="icon-gift m_l_right"></span>VIEW ALL</a>
+                </div>
+          
+        	</div>
+                
+        </section>															<!-- Gift items -->
+    
+    </nav>																	<!-- Nav -->
+    
+</body>
+</html>
