@@ -283,7 +283,6 @@ header {
 			box-shadow:         0px 0px 6px 0px rgba(50, 50, 50, 0.75);
 			height: 3.8em;
 			font-size:.9em;
-			/*@extend .txt-emboss;*/
 			ul li:hover {
 				color:$ntl_l;
 			}
@@ -294,6 +293,8 @@ header {
 		}
 			
 			.nav_selected {
+				color:$prm_m;				
+				/*
 				color:#fff !important;
 				font-weight:$font_prm_sd;
 				text-shadow:$ntl_m 1px 1px 0;
@@ -311,6 +312,7 @@ header {
 					border-width: 12px;
 					margin-left: -12px; 
 				} 
+				*/
 			}
 		/* Form */		
     	label{

@@ -24,17 +24,19 @@ $('a.taphover').on("touchstart", function(e)
 			e.preventDefault();
 			return false; 											//extra, and to make sure the function has consistent return points
 		}
-
 });
+
+/************************************/	
 
 function DropDown(parent, obj, menu)
 {	
 	var timeoutId = null,
-		timer = 200;
+		timer = 200,
+		arrow;
 	
 	this.parent = parent;
 	this.obj = obj;
-	this.menu = menu;
+	this.menu = menu; 
 	
 	this.set = function()
 	{
@@ -42,6 +44,10 @@ function DropDown(parent, obj, menu)
 			var height = parseInt(parent.height());
 			menu.css('top', height + 'px');
 		});
+		
+		var arrow = document.createElement('span');
+		$(arrow).addClass('dropArrow');
+		obj.append(arrow);
 		this.enter();
 		this.menuEnter();
 	};
@@ -54,7 +60,8 @@ function DropDown(parent, obj, menu)
 			{
 				timeoutId = window.setTimeout(function(){
 					timeoutId = null;
-					menu.slideDown(200);
+					menu.slideDown(300);
+					obj.find('.dropArrow').fadeIn(300);
 				}, timer );
 			}	
 		},
@@ -67,7 +74,8 @@ function DropDown(parent, obj, menu)
 			}	
 			else
 			{
-				menu.slideUp(200);
+				menu.slideUp(300);
+				obj.find('.dropArrow').fadeOut(100);
 			}
 		}
 		);
@@ -78,19 +86,36 @@ function DropDown(parent, obj, menu)
 		menu.mouseenter(function(){
 			menu.stop().show();
 		}).mouseleave(function(){
-			menu.stop().slideUp(200);
+			obj.find('dropArrow').remove();
+			menu.stop().slideUp(300);
 		});;
 	};
 	
+	this.addArrow = function()
+	{
+		var arrow = document.createElement('span');
+		$(arrow).addClass('dropArrow');
+		obj.append(arrow);
+	};
+	
 };
+
+/************************************/	
 
 function dropDownCall(parent, obj, menu)
 {
 	var instance = new DropDown(parent, obj, menu);
 	return instance;
 }
-	
+
+/************************************/	
+
 var giftItems = dropDownCall($('nav'),$('.gift_items'), $('#giftLinks'));	
 giftItems.set();
+	
+var index = dropDownCall($('nav'),$('.home'), $('#homeDrop'));	
+index.set();
+
+
 		
 });

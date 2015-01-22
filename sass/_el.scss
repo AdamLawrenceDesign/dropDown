@@ -28,15 +28,61 @@
 nav {
 	position:relative;
 	width: 100%;
+	@extend .border_box;
 	@extend .txt-emboss;
+	@extend .ease_sd;
 	font-size:.8em;
-	ul li:hover {
-		color:$ntl_l;
+	ul.inline li:hover {
 	}
 	ul li a {
 		@extend .border_box;
 	}  
 }
+	#dropDownWrap {
+		min-width:100%;
+		overflow:auto;
+	}
+
+		.dropDown {
+			position:absolute;
+			left:0;
+			z-index:5;
+			display:none;
+			width:100%;
+			border-top:2px solid #ddd;
+			ul {
+				margin-top:.5em;
+			};
+			ul li a {
+				line-height:1;
+				border-bottom:0;
+				padding-top:0;
+				padding-bottom:0;
+				height:auto
+			};
+			a:hover {
+				color:rgb(108, 173, 223);
+			}
+		}
+		
+		.dropArrow {
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-top-color:#dfdfdf; 
+			border-width: 12px;
+			margin-left: -12px;
+			display:none;
+			@extend .ease_sd;
+		}
+
+
+
 /* ===================================== */
 /*
 .main_wrapper {
